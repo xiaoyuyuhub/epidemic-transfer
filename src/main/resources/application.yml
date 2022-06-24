@@ -1,0 +1,33 @@
+#Mybatis Plus
+mybatis-plus:
+  # package
+  typeAliasesPackage: teligen.jz.epidemictransfer
+  configuration:
+    # SQL
+    #log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    # peak config
+    map-underscore-to-camel-case: true
+    # notice ''
+    jdbc-type-for-null: 'null'
+
+# DataSource Config
+spring:
+  # cqjc main datasource
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/maydaytest?useUnicode=true&characterEncoding=utf-8&allowMultiQueries=true
+    username: jc
+    password: jc
+
+epidemictransfer:
+  jz-ftp:
+    ip: 127.0.0.1
+    port: 21
+    username: local
+    password: local
+    path: JZ
+  zip-file-path: epdata/zip/file/
+  zip-file-path-bak: epdata/zip/bak/
+  excel-file-path: epdata/excel/file/
+  excel-file-path-bak: epdata/excel/bak/
+  unzip-password-pre: CAICT
